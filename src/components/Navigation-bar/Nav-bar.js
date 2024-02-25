@@ -1,40 +1,36 @@
 import './Nav-bar.scss';
 import logo from '../../assets/Logo/BrainFlix-logo.svg';
+import searchIcon from '../../assets/Icons/search.svg';
+import mohanImg from '../../assets/Images/Mohan-muruge.jpg';
 import React, { useState } from 'react';
 
-const NavigationBar = ({ onSearchSubmit }) => {
-    const [searchTerm, setSearchTerm] = useState('');
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      onSearchSubmit(searchTerm);
-      setSearchTerm(''); // Reset the search term after submission
-    };
-  
-    return (
-      <header className="header">
-        <img src={logo} alt="Brainflix logo" className="header__logo" />
-        
-        <form className="header__search-form" onSubmit={handleSubmit}>
-          <input
-            type="search"
-            name="search"
-            className="header__search-input"
-            placeholder="Search"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <button type="submit" className="header__search-button">
-            🔍
-          </button>
-        </form>
-        
-        <button className="header__upload-button">
+const NavigationBar = () => {
+
+  return (
+    <nav className="nav">
+      <a src="/">
+        <img src={logo} alt="BrainFlix Logo" className="nav__logo" />
+      </a>
+      <div className="nav__container">
+        <input
+          type="search"
+          placeholder="      Search"
+          className="nav__search"
+          id="search-input"
+        ></input>
+        <img src={searchIcon} alt="search-icon" className="nav__container__search"></img>
+        <a src="/" className="nav__upload-buttons button-tablet">
           UPLOAD
-        </button>
-      </header>
-    );
-  };
-  
+        </a>
+        <div className="nav__profle">
+          <img src={mohanImg} alt="Mohan-profile" className="nav__mohan"></img>
+        </div>
+      </div>
+      <a src="/" className="nav__upload-buttons button-mobile">
+        UPLOAD
+      </a>
+    </nav>
+  );
+}
 
 export default NavigationBar;

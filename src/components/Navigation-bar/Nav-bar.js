@@ -14,7 +14,7 @@ const NavigationBar = () => {
       <div className="nav__container">
         <input
           type="search"
-          placeholder="      Search"
+          placeholder="Search"
           className="nav__search"
           id="search-input"
         ></input>

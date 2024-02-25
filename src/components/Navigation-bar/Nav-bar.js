@@ -19,7 +19,7 @@ const NavigationBar = () => {
           id="search-input"
         ></input>
         <img src={searchIcon} alt="search-icon" className="nav__container__search"></img>
-        <a src="/" className="nav__upload-buttons button-tablet">
+        <a src="/" className="nav__upload-buttons button">
           UPLOAD
         </a>
         <div className="nav__profle">

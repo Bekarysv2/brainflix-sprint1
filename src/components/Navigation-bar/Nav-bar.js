@@ -1,3 +1,5 @@
+Nav-bar js
+
 import './Nav-bar.scss';
 import logo from '../../assets/Logo/BrainFlix-logo.svg';
 import searchIcon from '../../assets/Icons/search.svg';
@@ -10,17 +12,16 @@ const NavigationBar = () => {
     <nav className="nav">
         <img src={logo} alt="BrainFlix Logo" className="nav__logo" />
       <div className="nav__container">
-        <input
-          type="search"
-          placeholder="      Search"
-          className="nav__search"
-          id="search-input"
-        ></input>
-        <img src={searchIcon} alt="search-icon" className="nav__container__search"></img>
-        <a src="/" className="nav__upload-buttons button">
-          UPLOAD
-        </a>
-        <div className="nav__profle">
+          <input
+            type="search"
+            placeholder="Search"
+            className="nav__search"
+            id="search-input"
+          ></input>
+        <button type="submit" className="nav__upload-button">
+        UPLOAD
+        </button>
+        <div className="nav__container__profile">
           <img src={mohanImg} alt="Mohan-profile" className="nav__mohan"></img>
         </div>
       </div>

@@ -13,7 +13,6 @@
     height: auto;
     display: flex;
     background-color: c.$background;
-    border-bottom: 1px solid black;
     
     @include d.mobile {
         padding: p.$mobRegPadding;

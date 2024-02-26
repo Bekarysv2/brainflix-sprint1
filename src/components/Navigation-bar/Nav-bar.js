@@ -8,26 +8,24 @@ const NavigationBar = () => {
 
   return (
     <nav className="nav">
-      <a src="/">
         <img src={logo} alt="BrainFlix Logo" className="nav__logo" />
-      </a>
       <div className="nav__container">
-        <input
-          type="search"
-          placeholder="Search"
-          className="nav__search"
-          id="search-input"
-        ></input>
-        <a src="/" className="nav__upload-button">
+          <input
+            type="search"
+            placeholder="Search"
+            className="nav__search"
+            id="search-input"
+          ></input>
+        <button type="submit" className="nav__upload-button">
         UPLOAD
-        </a>
-        <div className="nav__profle">
+        </button>
+        <div className="nav__container__profile">
           <img src={mohanImg} alt="Mohan-profile" className="nav__mohan"></img>
         </div>
       </div>
-      <a src="/" className="nav__upload-button-mobile">
+      <button type="submit" className="nav__upload-button-mobile">
         UPLOAD
-      </a>
+      </button>
     </nav>
   );
 }

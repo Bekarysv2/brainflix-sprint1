@@ -1,4 +1,3 @@
-Video details js
 
 import './VideoDetails.scss';
 import viewIcon from "../../assets/Icons/views.svg";

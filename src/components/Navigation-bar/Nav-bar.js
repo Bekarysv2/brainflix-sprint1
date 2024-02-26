@@ -1,4 +1,3 @@
-Nav-bar js
 
 import './Nav-bar.scss';
 import logo from '../../assets/Logo/BrainFlix-logo.svg';

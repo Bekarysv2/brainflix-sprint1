@@ -1,0 +1,109 @@
+@use '../../styles/partials/displays' as d;
+@use '../../styles/partials/padding' as p;
+@use '../../styles/partials/colours' as c;
+@use '../../styles/partials/font-size' as f;
+@use '../../styles/partials/font';
+
+
+* {
+    font-family: 'AvenirNextLTPro-Regular';
+}
+
+.active-video {
+    width: 100%;
+    height: auto;
+
+    @include d.mobile {
+        padding: p.$mobRegPadding;
+    }
+
+    @include d.tablet {
+        padding: p.$regPadding;
+    }
+
+    @include d.desktop {
+        padding: p.$regPadding 10vw;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 1.5rem;
+
+        @include d.mobile {
+            padding-bottom: 20px;
+            border-bottom: 1px solid c.$divider;
+        }
+    }
+
+    &__details {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid c.$divider;
+
+        &__left {
+            width: 50%;
+
+            @include d.tablet {
+                display: flex;
+            }
+
+            @include d.desktop {
+                display: flex;
+            }
+
+            &__channel {
+                font-weight: bold;
+
+                @include d.tablet {
+                    margin-right: 20px;
+                }
+
+                @include d.desktop {
+                    margin-right: 20px;
+                }
+            }
+
+            &__date {
+                color: c.$secondaryText;
+            }
+        }
+
+        &__right {
+
+            @include d.mobile {
+                width: 50%;
+            }
+
+
+            @include d.tablet {
+                display: flex;
+            }
+
+            @include d.desktop {
+                display: flex;
+            }
+
+            &__views {
+                display: flex;
+
+                @include d.tablet {
+                    margin-right: 20px;
+                }
+
+                @include d.desktop {
+                    margin-right: 20px;
+                }
+
+                &__number {
+                    color: c.$secondaryText;
+                }
+            }
+
+            &__likes {
+                display: flex;
+                color: c.$secondaryText;
+            }
+
+        }
+    }
+}

@@ -23,7 +23,6 @@ const NavigationBar = () => {
           UPLOAD
         </a>
         <div className="nav__profle">
-          <img src={mohanImg} alt="Mohan-profile" className="nav__mohan"></img>
         </div>
       </div>
       <a src="/" className="nav__upload-buttons button-mobile">

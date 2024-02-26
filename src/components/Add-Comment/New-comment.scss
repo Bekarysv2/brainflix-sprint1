@@ -1,0 +1,39 @@
+@use '../../styles/partials/displays' as d;
+@use '../../styles/partials/padding' as p;
+@use '../../styles/partials/colours' as c;
+@use '../../styles/partials/font-size' as f;
+@use '../../styles/partials/font';
+
+* {
+    font-family: 'AvenirNextLTPro-Regular';
+}
+
+.submit-comment {
+    width: 100%;
+    height: auto;
+
+    @include d.mobile {
+        padding: p.$mobRegPadding;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__container { 
+        width: 100%;
+        border-bottom: 1px solid c.$divider;
+        padding-bottom: 20px;
+        display: flex;
+
+        &__profile {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            overflow: hidden;
+        }
+    }
+}
+
+.comment-count {
+    font-weight: bold;
+}
